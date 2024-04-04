@@ -1,0 +1,229 @@
+header {
+    height: 152px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(2, 23, 107), rgb(5, 37, 167), rgb(53, 120, 255), white);
+
+}
+.logo{
+    padding-right: 10px;
+}
+.search{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.search .form {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+.search .form input {
+    height: 62px;
+    border-radius: 14px;
+    border-color: #0733bc;
+    width: 505px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.search .social ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+.search .social ul li {
+    padding: 0 10px;
+}
+.nav {
+    padding: 10px 0;
+}
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav ul li a {
+    color: #ffffff;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+}
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    height: 340px;
+}
+section .container{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-weight: 700;
+}
+.title-container span:first-child{
+    font-family: "Orbitron", sans-serif;
+    font-size:60px ;
+    color: #f57d10;
+    line-height: normal;
+}
+.title-container span:last-child{
+    font-size: 120px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    color: #f57d10;
+}
+#hero{
+    background: url(assets/Logo-1-removebg-preview.png);
+    background-size: 50%;
+    background-position: right;
+}
+span{
+    display: block;
+}
+main {
+    height: auto;
+}
+footer {
+    min-height: 368px;
+}
+.container{
+    margin: 0 auto;
+    height: inherit;
+    min-height: inherit;
+    width: 100%;
+}
+
+.product-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
+    grid-auto-rows: auto;
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+}
+.product-img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position:  center center;
+    border-radius: 10px;
+}
+body, html {
+    font-family: "Inter", sans-serif;
+}
+.product-price-block {
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-card{
+    background-color: #f0f0f0;
+    border-radius: 14px;
+    overflow: hidden;
+    width: auto;
+    padding: 20px;
+}
+.product-info{
+    padding: 20px;
+    box-sizing: border-box;
+}
+.product-title{
+    word-wrap: break-word;
+    display: block;
+    line-height: 22px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.product-description{
+    font-size: 15px;
+    font-weight: normal;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    
+}
+.product-tax-policy{
+    font-size: 9px;
+    font-weight: lighter;
+}
+.product-price-block .price {
+    font-size: 22px;
+    font-weight: 700;
+    flex: 1;
+}
+.product-price-block .discount {
+    font-size: 12px;
+    font-weight: 700;
+    color: #428f13;
+}
+footer{
+    min-height: 360px;
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(2, 23, 107), rgb(5, 37, 167), rgb(53, 120, 255), white);
+}
+footer .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.columns-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.columns-container .col ul {
+    list-style-type: none;
+    padding: 0;
+}
+.columns-container .col ul li {
+    padding: 5px 0;
+}
+.columns-container .col ul li.col-main-item {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.columns-container .col ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.copyright {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+@media (max-width:850px){
+    .search .form input {
+        height: 50px;
+        border-radius: 14px;
+        border: none;
+        width: 250px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .search{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    body, html{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 ;
+    }
+    .container{
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    .product-img{
+        border-radius: 10px;
+    }
+}
