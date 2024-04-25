@@ -1,5 +1,6 @@
 class Product {
-    constructor(name, description, price, discount, image) {
+    constructor(id,name, description, price, discount, image) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
@@ -8,13 +9,15 @@ class Product {
     }
 }
 const product1 = new Product(
-    'Macbook PRO 15mil 15\'4',
+    1,
+    'Auricular Bluetooh',
     'Space Gray',
     1000,
     0.5,
     'assets/1.png'
 );
 const product2 = new Product(
+    2,
     'Macbook PRO 15mil 15\'4',
     'Space Gray',
     1000,
@@ -22,6 +25,7 @@ const product2 = new Product(
     'assets/1.png'
 );
 const product3 = new Product(
+    3,
     'Macbook PRO 15mil 15\'4',
     'Space Gray',
     1000,
@@ -29,6 +33,7 @@ const product3 = new Product(
     'assets/1.png'
 );
 const product4 = new Product(
+    4,
     'Macbook PRO 15mil 15\'4',
     'Space Gray',
     1000,
@@ -36,6 +41,7 @@ const product4 = new Product(
     'assets/1.png'
 );
 const product5 = new Product(
+    5,
     'Macbook PRO 15mil 15\'4',
     'Space Gray',
     1000,
@@ -43,6 +49,7 @@ const product5 = new Product(
     'assets/1.png'
 );
 const product6 = new Product(
+    6,
     'Macbook PRO 15mil 15\'4',
     'Space Gray',
     1000,
