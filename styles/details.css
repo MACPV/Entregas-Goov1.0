@@ -76,11 +76,19 @@ main {
     height: auto;
 }
 
+main .container {
+    flex-grow: 1;
+    flex-wrap: wrap;
+    display: flex;
+
+}
+
 main .columns-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 
 .imagenes,
 .details,
@@ -102,17 +110,9 @@ main .columns-container {
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     padding: 5px;
-}
-
-.product-images-block input[type="radio"] {
-    width: 50px;
-    height: 50px;
-    border: 2px solid #f57d10;
-    ;
+    box-sizing: border-box;
     outline: none;
     appearance: none;
-    cursor: pointer;
-    box-shadow: 0 0 2px #000;
     -webkit-transition: all 0.7s ease-in-out;
     -moz-transition: all 0.7s ease-in-out;
     -ms-transition: all 0.7s ease-in-out;
@@ -120,53 +120,51 @@ main .columns-container {
     transition: all 0.7s ease-in-out;
 }
 
-.product-images-block input[type="radio"]:hover {
-    transform: scale(1.1);
+.product-images-block img {
     box-shadow: 0 0 5px #000;
+    height: 50px;
+    gap: 5px;
+    border: 2px solid #f57d10;
 }
 
 #image-01 {
-    background-image: url(../assets/1.png);
     background-size: cover;
     grid-row: 1/2;
 }
 
 #image-02 {
-    background-image: url(../assets/2.png);
     background-size: cover;
     grid-row: 2/3;
 }
 
 #image-03 {
-    background-image: url(../assets/3.png);
     background-size: cover;
     grid-row: 3/4;
 }
 
 #image-04 {
-    background-image: url(../assets/4.png);
     background-size: cover;
     grid-row: 4/5;
 }
 
 #image-05 {
-    background-image: url(../assets/5.png);
     background-size: cover;
     grid-row: 5/6;
 }
 
 #image-06 {
-    background-image: url(../assets/6.png);
     background-size: cover;
     grid-row: 6/7;
 }
 
 
 
-.main-image {
-    width: 360px;
-    height: 360px;
+#main-image {
+    width: auto;
+    height: 370px;
     border: 2px solid #f57d10;
+    object-fit: cover;
+    background-size: cover;
     grid-column: 2/3;
     grid-row: 1/7;
     box-shadow: 0 0 5px #000;
@@ -177,35 +175,6 @@ main .columns-container {
     transition: all 0.7s ease-in-out;
 }
 
-#image-01:checked~.main-image {
-    background-image: url(../assets/1.png);
-    background-size: cover;
-}
-
-#image-02:checked~.main-image {
-    background-image: url(../assets/2.png);
-    background-size: cover;
-}
-
-#image-03:checked~.main-image {
-    background-image: url(../assets/3.png);
-    background-size: cover;
-}
-
-#image-04:checked~.main-image {
-    background-image: url(../assets/4.png);
-    background-size: cover;
-}
-
-#image-05:checked~.main-image {
-    background-image: url(../assets/5.png);
-    background-size: cover;
-}
-
-#image-06:checked~.main-image {
-    background-image: url(../assets/6.png);
-    background-size: cover;
-}
 
 .product-description-block .title {
     color: #f57d10;
