@@ -94,9 +94,9 @@
                         </ul>
                     </div> -->
             </div>
-            <div class="checkout-container">
-                <span class="checkout-total-label">Total</span>
-                <h2 class="checkout-total-price">$20</h2>
+            <div class="checkout-container"><!-- 
+                <span class="checkout-total-label">Precio unitario</span>
+                <h2 class="checkout-total-price" id="unit-price">$20</h2>
                 <p class="checkout-description"> Aceptamos Todas las Tarjetas de credito y debito
                 </p>
                 <ul class="checkout-policy-list">
@@ -118,18 +118,22 @@
                 </ul>
                 <div class="checkout-process">
                     <div class="top">
-                        <input type="number" value="1" />
+                        <input type="number" value="1" onchange="changeSubtotal()" class="input" id="quantity" />
+                        <div class="subtotal-container">
+                            <span class="subtotal-label">Subtotal</span>
+                            <span class="subtotal" id="subtotal">$20</span>
+                        </div>
                         <button class="btn-primary">Comprar</button>
                     </div>
                     <div class="bottom">
                         <button class="btn-outline">Añadir al Carrito</button>
                     </div>
                 </div>
+            </div> -->
             </div>
-        </div>
-        <div class="sales-block">
-            <h1 id="mensaje"></h1>
-        </div>
+            <div class="sales-block">
+                <h1 id="mensaje"></h1>
+            </div>
         </div>
     </main>
     <footer>

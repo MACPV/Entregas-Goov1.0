@@ -77,18 +77,16 @@ main {
 }
 
 main .container {
-    flex-grow: 1;
     flex-wrap: wrap;
     display: flex;
-
+    justify-content: center;
 }
 
 main .columns-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-}
 
+}
 
 .imagenes,
 .details,
