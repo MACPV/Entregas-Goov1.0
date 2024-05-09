@@ -43,12 +43,6 @@
                         </li>
                         <li><a href="#"><i class="fa-brands fa-tiktok fa-bounce fa-lg" style="color: #ffffff;"></i></a>
                         </li>
-
-                        <li><a id="cart-link" href="./cart.html"><i style="color: #ffffff;"></i></a>
-                        </li>
-                        <li><button id="user-bttn" onclick="changeUserImg()"><i id="user-icon"
-                                    class="fa-solid fa-circle-user fa-beat-fade fa-2xl"
-                                    style="color: #ffffff;"></i></button></li>
                     </ul>
 
             </div>
@@ -58,17 +52,37 @@
         </div>
     </header>
     <section id="hero">
-        <div class="container">
-            <div class="title-container">
-                <span>Entregas</span>
-                <span>Goo</span>
-            </div>
+        <div class="container" id="favorite-products-details">
+        </div>
         </div>
     </section>
     <main>
-        <div class="container">
-            <div id="products" class="product-container">
+        <div class="container-cart">
+            <div id="products" class="product-container-cart">
+                <div id="cart-products-details">
+                    <!-- <div class="product-images-cart">
+                        <img id="img-01" src="./assets/1.png" alt="img-01" class="images">
+                    </div>
 
+                    <div>
+                        <h3 id="name-01">Product Name</h3>
+                        <p id="color-01">color</p>
+                        <p id="quantity-01">quantity</p>
+                    </div>
+                    <div>
+                        <h3 id="price-01">$ 0.0</h3>
+                    </div> -->
+                </div>
+                <div id="cart-products-prices">
+                    <h2>Resumen del pedido</h2>
+                    <div class="total-container">
+                        <h3>Total</h3>
+                        <h3 id="total">$ 0.0</h3>
+                    </div>
+                    <p>Impuestos incluidos</p>
+                    <button class="btn-primary">Comprar</button>
+
+                </div>
             </div>
         </div>
     </main>
@@ -82,9 +96,8 @@
     </footer>
     <script src="javascript/layout.js"></script>
     <script src="javascript/product.js"></script>
-    <script src="javascript/productcards.js"></script>
+    <script src="javascript/cart.js"></script>
     <script src="javascript/filterProducts.js"></script>
-    <script src="javascript/user.js"></script>
 </body>
 
 </html>

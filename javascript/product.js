@@ -20,11 +20,11 @@ const product1 = new Product(
 );
 const product2 = new Product(
     2,
-    'Macbook  15mil 15\'4',
-    'Space Gray',
+    'Gatillero',
+    'W11 +',
     1000,
     0.5,
-    ['assets/1.png', 'assets/2.png', 'assets/3.png', 'assets/4.png', 'assets/5.png'],
+    ['assets/2/1.jpg', 'assets/2.png', 'assets/3.png', 'assets/4.png', 'assets/5.png'],
     ['gris']
 );
 const product3 = new Product(
@@ -43,7 +43,7 @@ const product4 = new Product(
     1000,
     0.5,
     ['assets/1.png', 'assets/2.png', 'assets/4.png', 'assets/5.png'],
-    ['blue']
+    ['blue', 'red', 'black']
 );
 const product5 = new Product(
     5,

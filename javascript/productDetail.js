@@ -1,6 +1,7 @@
+
 const query = location.search;
 const params = new URLSearchParams(query);
-const id = params.get('id');
+const id = +params.get('id');
 console.log(query);
 console.log(params);
 console.log(id);
@@ -32,7 +33,7 @@ function printDetails(id) {
         <form class="selector">
             <fieldset>
                 <label class="label" for="color">Color Disponible </label>
-                <select type="text" placeholder="Selecciona un color">
+                <select type="text" id="color-${id}" placeholder="Selecciona un color">
                     ${product.color.map((each) => `<option value="${each}">${each}</option>`).join("")}
                 </select>
             </fieldset>
@@ -79,7 +80,7 @@ function printCheckouts(id) {
             </ul>
             <div class="checkout-process">
                 <div class="top">
-                    <input type="number" value="1" onchange="changeSubtotal(this.value, ${product.price})" class="input" id="quantity" />
+                    <input type="number" value="1" onchange="changeSubtotal(this.value, ${product.price})" class="input" id="quantity-${id}" />
                     <div class="subtotal-container">
                         <span class="subtotal-label">Subtotal</span>
                         <span class="subtotal" id="subtotal">$${product.price}</span>
@@ -87,7 +88,7 @@ function printCheckouts(id) {
                     <button class="btn-primary">Comprar</button>
                 </div>
                 <div class="bottom">
-                    <button class="btn-outline">Añadir al Carrito</button>
+                    <button class="btn-outline" onclick="saveProduct(${product.id})">Añadir al Carrito</button>
                 </div>
             </div>
     `;
@@ -100,7 +101,35 @@ function changeSubtotal(quantity, price) {
     document.getElementById('subtotal').textContent = `$${subtotal}`;
 }
 
+function saveProduct(id) {
+    const found = products.find((each) => each.id === id);
+    if (!found) {
+        console.error(`No se encontró ningún producto con el ID ${id}`);
+        return; // Salir de la función si no se encontró el producto
+    }
+    let existArray = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = {
+        id: id,
+        name: found.name,
+        price: found.price,
+        image: found.image[0],
+        color: document.querySelector("#color-" + id).value,
+        quantity: document.querySelector("#quantity-" + id).value,
+    };
+
+    const index = existArray.findIndex((item) => item.id === id);
+    if (index !== -1) {
+        // Si el producto ya existe, actualizar sus propiedades
+        existArray[index] = product;
+    } else {
+        // Si el producto no existe, agregarlo al arreglo
+        existArray.push(product);
+    }
+    localStorage.setItem('cart', JSON.stringify(existArray));
+}
 printImages(id);
 printDetails(id);
 printCheckouts(id);
 changeMainImage(id);
+saveProduct(id);
+
