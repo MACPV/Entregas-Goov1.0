@@ -18,11 +18,11 @@ function printImages(id) {
     imagesSelector.innerHTML = imagesTemplate;
 }
 function changeMainImage(id) {
-    const mainImage = document.getElementById("main-image");
+    const mainImage = document?.getElementById("main-image");
     const clickedImage = document.getElementById(id);
 
-    mainImage.src = clickedImage.src;
-    mainImage.alt = clickedImage.alt;
+    mainImage.src = clickedImage?.src;
+    mainImage.alt = clickedImage?.alt;
 
 }
 function printDetails(id) {
