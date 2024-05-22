@@ -29,7 +29,7 @@ const product2 = new Product(
 );
 const product3 = new Product(
     3,
-    'Macbook PRO 15mil 15\'4',
+    'Zacbook PRO 15mil 15\'4',
     'Space Gray',
     1000,
     0.5,
@@ -38,7 +38,7 @@ const product3 = new Product(
 );
 const product4 = new Product(
     4,
-    'Macbook PRO 15mil 15\'4',
+    'Mbcbook PRO 15mil 15\'4',
     'Space Gray',
     1000,
     0.5,
@@ -63,4 +63,4 @@ const product6 = new Product(
     ['assets/1.png',  'assets/3.png', 'assets/4.png', 'assets/5.png'],
     ['yellow']
 );
-const products = [product1, product2, product3, product4, product5, product6];
+export const products = [product1, product2, product3, product4, product5, product6];

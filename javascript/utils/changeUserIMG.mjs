@@ -1,12 +1,11 @@
-const buttonUser = document.getElementById("user-bttn");
+import { changeStatus } from "./user.mjs";
+document.addEventListener("DOMContentLoaded", () => {
+    const buttonUser = document.getElementById("user-bttn");
+    buttonUser.addEventListener("click", changeUserImg);
+})
 
-function loginUser() {
-    
-    localStorage.setItem("user");
-
-}
-
-function changeUserImg() {
+window.changeUserImg = changeUserImg
+export function changeUserImg() {
     
     const userImg = document.querySelector('#user-icon');
     const cartview = document.querySelector('#cart-link');
@@ -22,13 +21,5 @@ function changeUserImg() {
         userImg.setAttribute('class', 'fa-solid fa-circle-user fa-beat-fade fa-2xl');
         cartview.removeAttribute('class');
         changeStatus();
-    }
-}
-
-function changeStatus() {
-    if (localStorage.getItem("user") == "true") {
-        localStorage.setItem("user", false);
-    } else {
-        localStorage.setItem("user", true);
     }
 }

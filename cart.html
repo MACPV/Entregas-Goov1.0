@@ -52,13 +52,13 @@
         </div>
     </header>
     <section id="hero">
-        <div class="container" id="favorite-products-details">
+        <div class="container-favorite" id="favorite-products-details">
         </div>
         </div>
     </section>
     <main>
         <div class="container-cart">
-            <div id="products" class="product-container-cart">
+            <div id="products-cart" class="product-container-cart">
                 <div id="cart-products-details">
                     <!-- <div class="product-images-cart">
                         <img id="img-01" src="./assets/1.png" alt="img-01" class="images">
@@ -94,10 +94,11 @@
             <div class="copyright">Entregas Goo&copy;</div>
         </div>
     </footer>
-    <script src="javascript/layout.js"></script>
-    <script src="javascript/product.js"></script>
-    <script src="javascript/cart.js"></script>
-    <script src="javascript/filterProducts.js"></script>
+    <script src="javascript/utils/layout.mjs" type="module"></script>
+    <script src="javascript/cart/cart.mjs" type="module"></script>
+    <script src="javascript/utils/filterProducts.mjs" type="module"></script>
+    <script src="javascript/favorites/favoritePrint.mjs" type="module"></script>
+    <script src="javascript/cart/changePriceTotal.mjs" type="module"></script>
 </body>
 
 </html>

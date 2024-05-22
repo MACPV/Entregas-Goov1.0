@@ -46,7 +46,7 @@
 
                         <li><a id="cart-link" href="./cart.html"><i style="color: #ffffff;"></i></a>
                         </li>
-                        <li><button id="user-bttn" onclick="changeUserImg()"><i id="user-icon"
+                        <li><button type="button" id="user-bttn" onclick="changeUserImg()"><i id="user-icon"
                                     class="fa-solid fa-circle-user fa-beat-fade fa-2xl"
                                     style="color: #ffffff;"></i></button></li>
                     </ul>
@@ -80,11 +80,14 @@
             <div class="copyright">Entregas Goo&copy;</div>
         </div>
     </footer>
-    <script src="javascript/layout.js"></script>
-    <script src="javascript/product.js"></script>
-    <script src="javascript/productcards.js"></script>
-    <script src="javascript/filterProducts.js"></script>
-    <script src="javascript/user.js"></script>
+    <script src="javascript/utils/layout.mjs" type="module"></script>
+    <script src="javascript/utils/product.mjs" type="module"></script>
+    <script src="javascript/prints/productcards.mjs" type="module"></script>
+    <script src="javascript/utils/filterProducts.mjs" type="module"></script>
+    <script src="javascript/utils/user.mjs" type="module"></script>
+    <script src="javascript/utils/changeUserIMG.mjs" type="module">import { changeUserImg } from "./changeUserIMG.mjs";
+    </script>
+
 </body>
 
 </html>

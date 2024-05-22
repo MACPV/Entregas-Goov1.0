@@ -1,6 +1,14 @@
+
+import { favoriteSave } from "../favorites/favoriteProduct.mjs";
+import { sortedArray } from "../sortProducts.mjs";
+import { products } from "../utils/product.mjs";
+window.favoriteSave = favoriteSave;
 const productsSelector = document.getElementById("products");
 
-function createCard(product) {
+
+
+
+export function createCard(product) {
     return `
     
     <article class="product-card">
@@ -15,7 +23,7 @@ function createCard(product) {
                     </a>
                     <span class="product-description">${product.description}</span>
                 </div>
-                    <button class="btn btn-add-cart"><i class="fa-solid fa-heart" style="color: #ff0000;"></i></button>
+                    <button class="btn btn-add-cart" onclick="favoriteSave('${product.id}')"><i class="fa-solid fa-heart" style="color: #ff0000;"></i></button>
                 </div>
                 <div class="product-price-block">
                     <span class="price">$${product.price.toFixed(2)}</span>
@@ -24,16 +32,18 @@ function createCard(product) {
                 <div class="product-tax-policy">Incluye IGV, solo Perú</div>
             </div>
     </article>
-    
     `;
 }
-function printCards(arrayOfProducts, idSelector) {
-    let productsTemplate = "";
+export function printCards(arrayOfProducts, idSelector) {
+    var productsTemplate = "";
     for (const element of arrayOfProducts) {
         productsTemplate += createCard(element);
     }
-    const productsSelector = document.getElementById(idSelector);
-    productsSelector.innerHTML = productsTemplate;
+    idSelector = document.getElementById(idSelector);
+    if (idSelector) {
+        idSelector.innerHTML = productsTemplate;
+    }
 }
-
-printCards(products, "products");
+const sortProductArray = sortedArray(products);
+console.log(sortProductArray)
+printCards(sortProductArray, "products");
