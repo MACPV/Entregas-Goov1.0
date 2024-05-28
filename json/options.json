@@ -1,0 +1,78 @@
+{
+    "navOptions": [
+        {
+            "name": "Ofertas de la semana",
+            "url": "#"
+        },
+        {
+            "name": "Contáctanos",
+            "url": "#"
+        },
+        {
+            "name": "Catálogo",
+            "url": "#"
+        }
+    ],
+    "footerOptions": [
+        {
+            "category": "Ofertas de la semana",
+            "links": [
+                {
+                    "name": "Laptops",
+                    "url": "#"
+                },
+                {
+                    "name": "Audio",
+                    "url": "#"
+                },
+                {
+                    "name": "Auriculares",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "category": "Cómo comprar",
+            "links": [
+                {
+                    "name": "Formas de pago",
+                    "url": "#"
+                },
+                {
+                    "name": "Envíos",
+                    "url": "#"
+                },
+                {
+                    "name": "Devoluciones",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "category": "Costos y tarifas",
+            "links": [
+                {
+                    "name": "Impuestos",
+                    "url": "#"
+                },
+                {
+                    "name": "Facturación",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "category": "Mis pedidos",
+            "links": [
+                {
+                    "name": "Pedir nuevamente",
+                    "url": "#"
+                },
+                {
+                    "name": "Lista de deseos",
+                    "url": "#"
+                }
+            ]
+        }
+    ]
+}

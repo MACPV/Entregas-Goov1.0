@@ -1,0 +1,104 @@
+[
+    {
+        "id": 1,
+        "name": "Auricular Bluetooh",
+        "description": "Space Gray",
+        "price": 20,
+        "discount": 0.5,
+        "image": [
+            "assets/1.png",
+            "assets/2.png",
+            "assets/3.png",
+            "assets/4.png",
+            "assets/5.png",
+            "assets/6.png"
+        ],
+        "color": [
+            "black"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Gatillero",
+        "description": "W11 +",
+        "price": 1000,
+        "discount": 0.5,
+        "image": [
+            "assets/2/1.jpg",
+            "assets/2.png",
+            "assets/3.png",
+            "assets/4.png",
+            "assets/5.png"
+        ],
+        "color": [
+            "gris"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Zacbook PRO 15mil 15'4",
+        "description": "Space Gray",
+        "price": 1000,
+        "discount": 0.5,
+        "image": [
+            "assets/1.png",
+            "assets/2.png",
+            "assets/3.png",
+            "assets/4.png"
+        ],
+        "color": [
+            "red",
+            "black"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Mbcbook PRO 15mil 15'4",
+        "description": "Space Gray",
+        "price": 1000,
+        "discount": 0.5,
+        "image": [
+            "assets/1.png",
+            "assets/2.png",
+            "assets/4.png",
+            "assets/5.png"
+        ],
+        "color": [
+            "blue",
+            "red",
+            "black"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Macbook PRO 15mil 15'4",
+        "description": "Space Gray",
+        "price": 1000,
+        "discount": 0.5,
+        "image": [
+            "assets/1.png",
+            "assets/2.png",
+            "assets/3.png",
+            "assets/5.png"
+        ],
+        "color": [
+            "green"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Macbook PRO 15mil 15'4",
+        "description": "Space Gray",
+        "price": 1000,
+        "discount": 0.5,
+        "image": [
+            "assets/1.png",
+            "assets/3.png",
+            "assets/4.png",
+            "assets/5.png"
+        ],
+        "color": [
+            "yellow"
+        ]
+    }
+]

@@ -1,3 +1,4 @@
+/*
 const navSelector = document.getElementById("nav");
 
 const options = [
@@ -51,4 +52,59 @@ for (let option of options1) {
     // Agregar la lista a la columna y la columna al #footer
     col.appendChild(list);
     footer.appendChild(col);
+}*/
+
+
+export const renderLayout = () => {
+    fetch('../json/options.json')
+        .then(response => response.json())
+        .then(data => {
+            const navOptions = data.navOptions;
+            const footerOptions = data.footerOptions;
+
+            // Renderizar las opciones de navegación
+            const navSelector = document.getElementById("nav");
+            for (let option of navOptions) {
+                const anchor = document.createElement("a");
+                anchor.className = "nav-button";
+                anchor.textContent = option.name;
+                anchor.href = option.url;
+                navSelector.appendChild(anchor);
+            }
+
+            // Renderizar las opciones del pie de página
+            const footerSelector = document.getElementById("footer");
+            for (let option of footerOptions) {
+                const col = document.createElement("div");
+                col.className = "col";
+
+                const list = document.createElement("ul");
+
+                const mainListItem = document.createElement("li");
+                mainListItem.className = "col-main-item";
+                const mainListItemLink = document.createElement("a");
+                mainListItemLink.href = "#";
+                mainListItemLink.textContent = option.category;
+                mainListItem.appendChild(mainListItemLink);
+                list.appendChild(mainListItem);
+
+                if (Array.isArray(option.links)) {
+                    for (let opt of option.links) {
+                        const listItem = document.createElement("li");
+                        const listItemLink = document.createElement("a");
+                        listItemLink.href = opt.url;
+                        listItemLink.textContent = opt.name;
+                        listItem.appendChild(listItemLink);
+                        list.appendChild(listItem);
+                    }
+                }
+
+                col.appendChild(list);
+                footerSelector.appendChild(col);
+            }
+        })
+        .catch(error => console.error('Error loading options:', error));
 }
+
+renderLayout();
+

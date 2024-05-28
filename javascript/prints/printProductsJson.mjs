@@ -1,16 +1,25 @@
 
-import { favoriteSave } from "../favorites/favoriteProduct.mjs";
-import { sortedArray } from "../sortProducts.mjs";
-import { products } from "../utils/product.mjs";
-window.favoriteSave = favoriteSave;
-const productsSelector = document.getElementById("products");
+document.addEventListener("DOMContentLoaded", function () {
+    fetchProducts();
+})
+export function fetchProducts() {
+    fetch('./json/products.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            renderProducts(data);
+        })
+        .catch(error => console.error('Error fetching products:', error));
+}
 
-fetch
 
-
-export function createCard(product) {
-    return `
-    
+function renderProducts(data) {
+    const productCard = document.getElementById("products");
+    productCard.innerHTML = data.map(product => `
     <article class="product-card">
         <a href="./details.html?id=${product.id}">
             <img class="product-img" src="${product.image[0]}" alt="${product.name}">
@@ -32,18 +41,5 @@ export function createCard(product) {
                 <div class="product-tax-policy">Incluye IGV, solo Perú</div>
             </div>
     </article>
-    `;
+    `).join("");
 }
-export function printCards(arrayOfProducts, idSelector) {
-    var productsTemplate = "";
-    for (const element of arrayOfProducts) {
-        productsTemplate += createCard(element);
-    }
-    idSelector = document.getElementById(idSelector);
-    if (idSelector) {
-        idSelector.innerHTML = productsTemplate;
-    }
-}
-const sortProductArray = sortedArray(products);
-console.log(sortProductArray)
-printCards(sortProductArray, "products");
